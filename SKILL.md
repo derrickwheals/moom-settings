@@ -41,6 +41,8 @@ Every action dictionary **must** have an `Action` key (integer code) and an `Ide
 | 33 | Move to Edge/Corner | Snaps a window to a screen edge or corner |
 | 41 | Move to Other Display | Sends a window to another monitor |
 | 51 | Resize | Resizes a window to specific dimensions |
+| 52 | Grow | Expands a window by a pixel amount from one edge |
+| 53 | Shrink | Contracts a window by a pixel amount from one edge |
 | 54 | Revert | Reverts a window to its previous size/position |
 | 61 | Separator Line | Visual separator in the Moom menu |
 | 0 | Spacer | Empty space in the Moom menu |

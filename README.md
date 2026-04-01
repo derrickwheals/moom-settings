@@ -166,12 +166,22 @@ Here are some example prompts that work well with this skill:
 | 33 | Move to Edge/Corner | Snap a window to a screen edge |
 | 41 | Move to Other Display | Send a window to another monitor |
 | 51 | Resize | Resize a window to specific dimensions |
+| 52 | Grow | Expand a window by a pixel amount from one edge |
+| 53 | Shrink | Contract a window by a pixel amount from one edge |
 | 54 | Revert | Undo the last Moom action |
 | 61 | Separator | Visual divider in the Moom menu |
 | 0 | Spacer | Empty space in the Moom menu |
 | -101 | Section Header | Text label in the Moom menu |
 
 ## Recently Added Features
+
+### Grow and Shrink Actions
+
+The skill now supports **Grow** (Action 52) and **Shrink** (Action 53) — actions that expand or contract the frontmost window by a fixed pixel amount from a specific edge (top, right, bottom, or left). These are useful for fine-tuning window sizes without fully repositioning them.
+
+### Any App Saved Layouts (Generic Layouts)
+
+In addition to app-specific layouts, the skill now supports **Generic / "Any Window" Layouts** — layouts that arrange the N most recently used windows regardless of which app owns them. Set `Generic: true` and `Activate Applications: false` for layouts that work with whatever windows you have open, not specific apps.
 
 ### Folders and Nested Organisation
 

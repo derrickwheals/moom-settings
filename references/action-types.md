@@ -12,7 +12,9 @@ Complete specification for all Moom action types, key codes, and modifier flags.
 6. [Action 33 — Move to Edge/Corner](#action-33--move-to-edgecorner)
 7. [Action 41 — Move to Other Display](#action-41--move-to-other-display)
 8. [Action 51 — Resize](#action-51--resize)
-9. [Action 54 — Revert](#action-54--revert)
+9. [Action 52 — Grow](#action-52--grow)
+10. [Action 53 — Shrink](#action-53--shrink)
+11. [Action 54 — Revert](#action-54--revert)
 10. [Action 61 — Separator](#action-61--separator)
 11. [Action 0 — Spacer](#action-0--spacer)
 12. [Action -101 — Section Header](#action--101--section-header)
@@ -351,6 +353,70 @@ Resizes the frontmost window to specific pixel dimensions.
 | Value | Anchor Position |
 |-------|----------------|
 | `10` | Top-left (default) |
+
+---
+
+## Action 52 — Grow
+
+Expands the frontmost window by a fixed pixel amount by moving one edge outward.
+
+### Required Keys
+
+| Key | Type | Description |
+|-----|------|-------------|
+| `Action` | integer | `52` |
+| `Identifier` | string | UUID |
+| `Move Delta` | integer | Pixels to expand by |
+| `Move Direction` | integer | Which edge to move (see below) |
+
+### Optional Keys
+
+| Key | Type | Description |
+|-----|------|-------------|
+| `Move Delta Unit` | integer | `0` = pixels/points |
+| `Hot Key` | dict | Keyboard shortcut |
+| `Title` | string | Display name |
+
+### Direction Codes
+
+| Value | Edge moved outward |
+|-------|--------------------|
+| `3` | Top |
+| `5` | Right |
+| `7` | Bottom |
+| `9` | Left |
+
+---
+
+## Action 53 — Shrink
+
+Contracts the frontmost window by a fixed pixel amount by moving one edge inward.
+
+### Required Keys
+
+| Key | Type | Description |
+|-----|------|-------------|
+| `Action` | integer | `53` |
+| `Identifier` | string | UUID |
+| `Move Delta` | integer | Pixels to contract by |
+| `Move Direction` | integer | Which edge to move (see below) |
+
+### Optional Keys
+
+| Key | Type | Description |
+|-----|------|-------------|
+| `Move Delta Unit` | integer | `0` = pixels/points |
+| `Hot Key` | dict | Keyboard shortcut |
+| `Title` | string | Display name |
+
+### Direction Codes
+
+| Value | Edge moved inward |
+|-------|-------------------|
+| `3` | Top |
+| `5` | Right |
+| `7` | Bottom |
+| `9` | Left |
 
 ---
 
